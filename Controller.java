@@ -12,7 +12,8 @@ public class Controller {
     public ComboBox cmbAjoutTexte;
 
     public void txfSourceDragDetected(MouseEvent mouseEvent) {
-        if (!txfSource.getText().isEmpty()){
+        TextField refSource = (TextField) mouseEvent.getSource();
+        if (!refSource.getText().isEmpty()){
             TextField ref = (TextField) mouseEvent.getSource();
             Dragboard db = ref.startDragAndDrop(TransferMode.ANY);
             ClipboardContent content = new ClipboardContent();
